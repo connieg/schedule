@@ -145,7 +145,7 @@ def prep_queries()
 end
 
 def dbconnect()
-  $db = Mysql.new("db.cecs.pdx.edu", "YOURNAMEHERE", "YOURPASSHERE", "schedule")
+  $db = Mysql.new("yourserverhere.example.com", "YOURNAMEHERE", "YOURPASSHERE", "YOURDATABASEHERE")
   $db.options(Mysql::OPT_CONNECT_TIMEOUT,0)
   #$db.reconnect = true
   $queries = {}
@@ -154,7 +154,7 @@ end
 
 configure do |c|
   c.nick = "DeskBot"
-  c.server = "iss.cat.pdx.edu"
+  c.server = "yourserverhere.example.com"
   c.port = "6697"
   c.ssl = true
   c.verbose = true
